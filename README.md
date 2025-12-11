@@ -1,4 +1,4 @@
-# CipherVixo – OSINT Toolkit (Русская версия)
+# CipherVixo – OSINT Toolkit 
 
 CipherVixo — безопасный инструмент OSINT для сбора информации из открытых источников.
 
