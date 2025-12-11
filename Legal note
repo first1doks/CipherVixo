@@ -1,0 +1,48 @@
+
+---
+
+# 📌 `ciphervixo.py`
+```python
+from colorama import Fore, Style
+from modules.ip_lookup import ip_lookup
+from modules.username_search import username_search
+from modules.website_info import website_info
+
+
+def banner():
+    print(Fore.CYAN + r"""
+   _____ _       __            
+  / ___/(_)___  / /___  _______
+  \__ \/ / __ \/ __/ / / / ___/
+ ___/ / / / / / /_/ /_/ (__  ) 
+/____/_/_/ /_/\__/\__,_/____/  
+      CipherVixo OSINT Toolkit
+""" + Style.RESET_ALL)
+
+
+def main():
+    banner()
+    print("1) Проверка IP")
+    print("2) Поиск пользователя")
+    print("3) Информация о сайте\n")
+
+    choice = input(">>> ")
+
+    if choice == "1":
+        ip = input("Введите IP: ")
+        ip_lookup(ip)
+
+    elif choice == "2":
+        user = input("Введите имя пользователя: ")
+        username_search(user)
+
+    elif choice == "3":
+        site = input("Введите сайт (с https://): ")
+        website_info(site)
+
+    else:
+        print("Неверный выбор.")
+
+
+if __name__ == "__main__":
+    main()
